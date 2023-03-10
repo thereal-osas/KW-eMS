@@ -29,7 +29,7 @@ function Gallery() {
 				// navigation={true}
 				modules={[Autoplay, Pagination, Navigation]}
 				className="mySwiper ">
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative mb-10   ">
 						<img
 							className=""
@@ -44,7 +44,7 @@ function Gallery() {
 					</div>
 				</SwiperSlide>
 
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative   ">
 						<img
 							className=""
@@ -58,7 +58,7 @@ function Gallery() {
 						</p>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative   ">
 						<img
 							className=""
@@ -72,7 +72,7 @@ function Gallery() {
 						</p>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative   ">
 						<img
 							className=""
@@ -86,7 +86,7 @@ function Gallery() {
 						</p>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative   ">
 						<img
 							className=""
@@ -100,7 +100,7 @@ function Gallery() {
 						</p>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="w-2/5 border-2 border-black  ">
+				<SwiperSlide className="w-2/5    ">
 					<div className="relative   ">
 						<img
 							className=""

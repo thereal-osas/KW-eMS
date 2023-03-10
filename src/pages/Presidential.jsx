@@ -4,6 +4,7 @@ import Candidatecard from "../components/Candidate_card";
 function Presidential() {
 	const Data = [
 		{
+			category: "presidential",
 			id: "21",
 			party: "APC",
 			age: "  70",
@@ -21,6 +22,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/11/BAT-1024x1024.jpg",
 		},
 		{
+			category: "presidential",
 			id: "22",
 			age: "  75",
 
@@ -36,6 +38,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/10/Atiku.jpg",
 		},
 		{
+			category: "presidential",
 			id: "23",
 			age: "  61",
 
@@ -49,6 +52,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/10/Peter-obi.jpg",
 		},
 		{
+			category: "presidential",
 			id: "24",
 			age: "  66",
 
@@ -64,6 +68,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/11/Rabiu-1024x1024.jpg",
 		},
 		{
+			category: "presidential",
 			id: "1",
 			name: "Hamza Al-Mustapha",
 			party: "AA",
@@ -78,6 +83,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Al-Mustapha-Hamza-AA.jpg",
 		},
 		{
+			category: "presidential",
 			id: "2",
 			name: "Yabagi Sani",
 			party: "ADP",
@@ -97,6 +103,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Sani-Yabagi-Yusuf-ADP.jpg",
 		},
 		{
+			category: "presidential",
 			id: "3",
 			name: "Nnamdi Charles Osita",
 			party: "APP",
@@ -107,6 +114,7 @@ function Presidential() {
 			image: "",
 		},
 		{
+			category: "presidential",
 			id: "4",
 			name: "Omoyele Sowore",
 			party: "AAC",
@@ -122,6 +130,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/10/Sowore.jpg",
 		},
 		{
+			category: "presidential",
 			id: "5",
 			name: "Kachikwu Dumebi",
 			party: "ADC",
@@ -135,6 +144,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Kachikwu-Dumebi-ADC.jpg",
 		},
 		{
+			category: "presidential",
 			id: "6",
 			name: "Umeadi Peter Nnanna Chukwud",
 			party: "APGA",
@@ -150,6 +160,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Umeadi-Peter-Nnanna-Chukwudi-APGA.jpg",
 		},
 		{
+			category: "presidential",
 			id: "7",
 			name: "Ojei Princess Chichi",
 			party: "APM",
@@ -165,6 +176,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Ojei-Princess-Chichi-APM.jpg",
 		},
 		{
+			category: "presidential",
 			id: "8",
 			name: "Adenuga Sunday Oluwafemi",
 			party: "BP",
@@ -182,6 +194,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Adenuga-Sunday-Oluwafemi-BP.jpg",
 		},
 		{
+			category: "presidential",
 			id: "9",
 			name: "Osakwe Felix Johnson",
 			party: "NRM",
@@ -198,6 +211,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Osakwe-Felix-Johnson-NRM.jpg",
 		},
 		{
+			category: "presidential",
 			id: "10",
 			name: "Kola Abiola",
 			party: "PRP",
@@ -214,6 +228,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Abiola-Latifu-Kolawole-PRP.jpg",
 		},
 		{
+			category: "presidential",
 			id: "11",
 			name: "Adebayo Adewole Ebenezer",
 			party: "SDP",
@@ -230,6 +245,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/ADEWOLE-ADEBAYO-SDP.jpg",
 		},
 		{
+			category: "presidential",
 			id: "12",
 			name: "Ado-Ibrahim Abdulmalik",
 			party: "YPP",
@@ -246,6 +262,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Ado-Ibrahim-Abdulmalik-YPP.jpg",
 		},
 		{
+			category: "presidential",
 			id: "13",
 			name: "Imumolen I. Christopher",
 			party: "A",
@@ -267,6 +284,7 @@ function Presidential() {
 				"https://elections.civichive.org/wp-content/uploads/2022/12/Imumolen-Irene-Christopher-Accord.jpg",
 		},
 		{
+			category: "presidential",
 			id: "14",
 			name: "Nwanyanwu Daniel Daberechukwu",
 			party: "ZLP",

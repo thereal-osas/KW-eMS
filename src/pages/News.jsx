@@ -7,7 +7,7 @@ function News() {
 			<section className="flex flex-col gap-4 md:flex-row container mx-auto pt-10">
 				<div className="md:w-1/2 w-full">
 					<Gallery />
-					<div className="flex flex-col lg:flex-row gap-2 items-center">
+					<div className="flex mt-8 md:mt-2 flex-col lg:flex-row gap-2 items-center">
 						<div className="lg:w-3/5 text-sm lg:text-base">
 							<p className="font-semibold">
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -26,6 +26,24 @@ function News() {
 					</div>
 				</div>
 				<div className="md:w-1/2 w-full">
+					<div className="flex flex-col-reverse lg:flex-row gap-2 text-sm bg-black text-white">
+						<p className="lg:w-2/5 p-2 ">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+							explicabo accusantium reprehenderit perferendis quidem maxime
+							explicabo accusantium reprehenderit perferendis quidem maxime
+							temporibus amet hic similique assumenda. Corporis, voluptates.
+						</p>
+						<div className="relative lg:w-3/5 h-fit p-2 inline-block  ">
+							<img
+								className=""
+								src="https://media.premiumtimesng.com/wp-content/files/2022/10/20220528_233007.jpg"
+								alt=""
+							/>
+							<p className="absolute text-white text-sm bottom-0 bg-black/60 p-2 z-10">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+							</p>
+						</div>
+					</div>
 					<div className="flex flex-col-reverse lg:flex-row gap-2 text-sm bg-black text-white">
 						<p className="lg:w-2/5 p-2 ">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
@@ -72,7 +90,7 @@ function News() {
 					<p className="font-semibold underline hidden lg:flex p-2 ">
 						Latest News
 					</p>
-					<main className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-2 text-sm">
+					<main className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-2 text-sm">
 						<div>
 							<div className="relative   ">
 								<img
@@ -86,7 +104,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -114,7 +132,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -142,7 +160,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -170,7 +188,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -198,7 +216,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -226,7 +244,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -254,7 +272,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>
@@ -282,7 +300,7 @@ function News() {
 									Veniam aspernatur ut impedit!
 								</p>
 							</div>
-							<div className="border-2 border-gray-700 px-2 rounded-b-xl">
+							<div className=" px-2 rounded-b-xl">
 								<div className="flex justify-between text-sm font-semibold px-4 pt-2 ">
 									<span>By Caleb</span>
 									<span>Feb 5,2023</span>

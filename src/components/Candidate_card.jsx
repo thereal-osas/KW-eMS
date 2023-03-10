@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Candidate_card({ item }) {
 	return (
-		<div className="max-w-[280px] flex flex-col items-center hover:scale-105 duration-500 py-3 justify-center bg-gray-600 text-white  shadow-black shadow-md gap-4">
+		<div className="max-w-[280px] flex flex-col items-center hover:scale-105 duration-500 py-3 justify-center bg-gray-100 text-black  shadow-black shadow-sm gap-4">
 			<img
 				className="h-72 w-60 flex justify-center items-center rounded-full"
 				src={item.image}
@@ -13,7 +13,7 @@ function Candidate_card({ item }) {
 				{item.about ? (
 					<Link
 						className="font-semibold"
-						to={`/candidates/presidential/${item.party}`}>
+						to={`/candidates/${item.category}/${item.party}`}>
 						{item.name}
 					</Link>
 				) : (
