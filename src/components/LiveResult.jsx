@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import chart from '../assets/chart1.svg'
 
 function LiveResult() {
@@ -24,9 +25,11 @@ function LiveResult() {
             />
           </div>
           <div className='text-center mt-10'>
-            <button className='px-4 py-2 bg-[#336DFF] text-sm text-white font-semibold rounded-lg hover:bg-[#adc5ff] hover:text-[#000] transition ease-in duration-150'>
-              Track Results
-            </button>
+            <Link to='/live_results'>
+              <button className='px-4 py-2 bg-[#336DFF] text-sm text-white font-semibold rounded-lg hover:bg-[#adc5ff] hover:text-[#000] transition ease-in duration-150'>
+                Track Results
+              </button>
+            </Link>
           </div>
         </div>
       </div>
