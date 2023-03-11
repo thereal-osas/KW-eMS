@@ -1,5 +1,5 @@
 import React from 'react'
-/* import CandidatesWatch from '../components/CandidatesWatch' */
+import CandidatesWatch from '../components/CandidatesWatch'
 import Hero from '../components/Hero'
 import InteractiveMap from '../components/InteractiveMap'
 import LiveResult from '../components/LiveResult'
@@ -12,7 +12,7 @@ function Home() {
         <Hero />
         <LiveResult />
         <InteractiveMap />
-        {/* <CandidatesWatch /> */}
+        <CandidatesWatch />
         <NewsArticles />
       </div>
     </>

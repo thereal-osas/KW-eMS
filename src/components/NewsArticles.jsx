@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import news1 from '../assets/news1.svg'
 import news2 from '../assets/news2.svg'
 import news3 from '../assets/news3.svg'
@@ -10,9 +11,12 @@ function NewsArticles() {
       <div className='bg-[#edf2ff] px-10 sm:px-28 pb-32'>
         <div className='flex flex-col sm:flex-row justify-between'>
           <div className='mt-16 text-center sm:text-left'>
-            <button className='px-5 py-2 bg-[#c8d6f9] text-sm text-black font-semibold rounded-lg'>
-              News/Articles
-            </button>
+            <Link to='/news'>
+              <button className='px-5 py-2 bg-[#c8d6f9] text-sm text-black font-semibold rounded-lg'>
+                News/Articles
+              </button>
+            </Link>
+
             <h3 className='mt-6 text-lg font-bold tracking-wider'>
               Take a look at our latest news and articles
             </h3>
