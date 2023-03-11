@@ -43,7 +43,7 @@ function Gubernatorial() {
 			<p className="text-xl font-semibold underline underline-offset-1 p-4 text-center">
 				GUBERNATORIAL CANDIDATES
 			</p>
-			<div className=" mx-auto w-fit grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+			<div className=" mx-auto w-fit grid grid-cols-1 gap-12 sm:gap-4 px-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
 				{Data.map((item) => (
 					<Candidatecard
 						key={item.id}

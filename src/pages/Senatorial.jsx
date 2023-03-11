@@ -25,8 +25,7 @@ function Senatorial() {
 			name: "Ridwan Apaokagi",
 			party: "SDP",
 			about: "",
-			image:
-				"https://www.google.com/url?sa=i&url=https%3A%2F%2Fne-np.facebook.com%2F100087651452477%2Fvideos%2Fdr-ridwanullahi-sallahudeen-apaokagi-aka-quran-ju-owo-lo-the-incoming-senator-kw%2F604249514829276%2F&psig=AOvVaw3s00NyPaflC-uFl041l6uq&ust=1678369321308000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDz5pG7zP0CFQAAAAAdAAAAABAE",
+			image: "",
 		},
 	];
 	const North = [

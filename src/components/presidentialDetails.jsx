@@ -27,21 +27,11 @@ function PresidentialDetails() {
 								{item.Fparty} ({item.party})
 							</p>
 						</div>
+						<div className="flex gap-2 font-semibold ">
+							<span>Age</span> <span>:</span> <span>{item.age}</span>
+						</div>
 					</div>
-					<div className="text-lg text-gray-800">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae eum
-						voluptates velit, ullam cum qui commodi ab, veniam cupiditate, ad a
-						blanditiis natus necessitatibus. Labore facere dolore illum ullam
-						reprehenderit laboriosam ut mollitia sint, voluptate hic ad
-						voluptatem recusandae veritatis ea error alias? Earum repellat illum
-						suscipit. Nam dolor magnam cupiditate voluptatem! Quam, itaque.
-						Quae, accusantium aperiam! Iure quis, iusto reprehenderit quia a
-						veniam tempora consequatur consequuntur sunt molestiae id nisi
-						accusantium facere iste cum animi quisquam! Quidem veniam dicta
-						architecto nobis possimus odit ab excepturi, necessitatibus
-						molestias facere. Mollitia commodi dignissimos quaerat doloremque
-						animi sunt deleniti dolores ducimus veniam?
-					</div>
+					<div className="text-lg text-gray-800">{item.about}</div>
 				</div>
 			</section>
 			;
