@@ -1,11 +1,16 @@
-const mongoose = require('mongoose').Mongoose;
+const mongoose = require('mongoose');
 const wardSchema = new mongoose.Schema({
-    wardId: {
+    lga: {
         type: mongoose.SchemaTypes.ObjectId,
-        required: true
+        ref: 'LocalGovernmentArea',
     },
     wardCode: {
-        type: Number
+        type: Number,
+        index: true
+    },
+    wardName: {
+        type: String,
+        index: true
     },
     pollingUnits: [{ //One-to-Many relationship
         type: mongoose.SchemaTypes.ObjectId,
@@ -13,12 +18,21 @@ const wardSchema = new mongoose.Schema({
     }]
 });
 
+
+//retrieve all PollingUnits Identifiers(name and code) of a particular Ward by its code.
 wardSchema.statics.retrieveAllPollingUnitsIdentifiers = async function (wardCode) {
     //use the wardCode to return all pollingUnits identifiers.
+    const pollingUnits = await this.findOne({wardCode})
+        .populate({path: "pollingUnits", select: "pollingUnitName pollingUnitCode"})
+        .select("pollingUnits").lean();
+    console.log(pollingUnits)
+    if (!pollingUnits)
+        throw new Error('Ward does not exist.');
+    return pollingUnits;
 }
 
-wardSchema.statics.retrieveAllPollingUnits = async function (wardCode) {
-    //use the wardCode to return all pollingUnits.
-}
+// wardSchema.statics.retrieveAllPollingUnits = async function (wardCode) {
+//     use the wardCode to return all pollingUnits.
+// }
 
 module.exports = mongoose.model('Ward', wardSchema);
