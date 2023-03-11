@@ -16,7 +16,7 @@ function Navbar() {
 
 	return (
 		<section className="mb-12">
-			<main className=" fixed top-0 left-0 right-0 bg-[#f4f7ff] z-[60] ">
+			<main className=" fixed top-0 left-0 right-0 bg-[#edf2ff] z-[60] ">
 				<div className="justify-between px-4 py-2 flex w-full">
 					<img
 						className="h-8"
@@ -57,7 +57,7 @@ function Navbar() {
 					</button>
 				</div>
 			</main>
-			<aside>
+			<aside className="sm:hidden">
 				<div
 					className={`z-50 duration-1000 p-10  fixed top-10 left-0 right-0 bottom-1/2 ${
 						Open ? "bg-[#f4f7ff] " : " bg-[#f4f7ff] -translate-y-full "
