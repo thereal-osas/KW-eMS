@@ -11,10 +11,10 @@ export default function Navmenu() {
 				as="div"
 				className="relative inline-block text-left">
 				<div>
-					<Menu.Button className="inline-flex w-full justify-center rounded-md  text-sm font-medium text-black  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+					<Menu.Button className="inline-flex w-full justify-center items-center rounded-md  sm:text-sm font-semibold sm:font-medium text-black  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
 						Candidates
 						<ChevronDownIcon
-							className="ml-2 -mr-1 h-5 w-5 text-black "
+							className="ml-2 -mr-1 h-5 w-5  text-black "
 							aria-hidden="true"
 						/>
 					</Menu.Button>

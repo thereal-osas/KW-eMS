@@ -17,6 +17,9 @@ const Presidential = lazy(() => import("./pages/Presidential"));
 const Gubernatorial = lazy(() => import("./pages/Gubernatorial"));
 const Senatorial = lazy(() => import("./pages/Senatorial"));
 const Reps = lazy(() => import("./pages/Reps"));
+const PresidentialDetails = lazy(() =>
+	import("./components/presidentialDetails")
+);
 
 function App() {
 	return (
@@ -36,11 +39,20 @@ function App() {
 						path="/news"
 						element={<News />}
 					/>
+					<Route
+						path="/candidates/presidential/:name"
+						element={<PresidentialDetails />}
+					/>
 					<Route path="/candidates">
 						<Route
 							path="presidential"
 							element={<Presidential />}
 						/>
+						{/* <Route
+							path="presidential"
+							element={<Presidential />}>
+							
+						</Route> */}
 						<Route
 							path="senatorial"
 							element={<Senatorial />}
