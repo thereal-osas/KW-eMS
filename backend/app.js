@@ -1,7 +1,5 @@
-// noinspection JSUnresolvedFunction
 const express = require('express');
 const mongoose = require('mongoose');
-// const cookieParser = require('cookie-parser');
 const lgaControllers = require("./controllers/LocalGovernmentAreaController");
 const wardControllers = require("./controllers/WardController");
 const pollingControllers = require("./controllers/PollingUnitController");
@@ -10,11 +8,11 @@ const app = express();
 
 //middleware
 app.use(express.json()); // parses the json content type...
-// app.use(cookieParser());
 
 //database connection
 const PORT = process.env.PORT;
 const DBURI = process.env.DBURI;
+
 mongoose.connect(DBURI,
     {useNewUrlParser: true, useUnifiedTopology: true, autoIndex: true}, () => {
         app.listen(PORT, () => {
