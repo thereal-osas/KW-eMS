@@ -11,7 +11,7 @@ function Footer() {
 					className="h-12"
 					src={Logo}
 					alt=""
-				/>{" "}
+				/>
 			</div>
 			<div className="grid grid-cols-3 gap-4 w-full px-2 md:px-12 md:grid-cols-4">
 				<div className=" hidden md:flex ">
@@ -19,7 +19,7 @@ function Footer() {
 						className="h-12"
 						src={Logo}
 						alt=""
-					/>{" "}
+					/>
 				</div>
 				<div className="flex flex-col gap-4 text-center">
 					<p className="font-semibold text-lg sm:text-xl">Company</p>
