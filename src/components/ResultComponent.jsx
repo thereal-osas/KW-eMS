@@ -1,4 +1,5 @@
 import React from "react";
+import { FiArrowDown } from "react-icons/fi";
 
 function ResultComponent() {
 	const APCwidth = "45%";
@@ -66,6 +67,10 @@ function ResultComponent() {
 				</div>
 				<span>204</span>
 			</div>
+			<button className="flex w-full  gap-3 items-center justify-center text-sm font-medium text-blue-500 p-5 border-b-[0.1px] border-gray-300">
+				<span>Scroll down for more</span>
+				<FiArrowDown size={25} />
+			</button>
 			<div className="flex flex-col gap-3 justify-center text-xs font-medium text-gray-500 p-4 border-b-[0.1px] border-gray-300">
 				<div className="flex gap-2">
 					<span>Registered Voters</span>
