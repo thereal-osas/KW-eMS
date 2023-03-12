@@ -20,12 +20,12 @@ const wardSchema = new mongoose.Schema({
 
 
 //retrieve all PollingUnits Identifiers(name and code) of a particular Ward by its code.
-wardSchema.statics.retrieveAllPollingUnitsIdentifiers = async function (wardCode) {
+wardSchema.statics.retrieveAllPollingUnitsIdentifiers = async function (state, lgaCode, wardCode) {
     //use the wardCode to return all pollingUnits identifiers.
     const pollingUnits = await this.findOne({wardCode})
         .populate({path: "pollingUnits", select: "pollingUnitName pollingUnitCode"})
+        .populate({path: "lga", match: {lgaCode, state}})
         .select("pollingUnits").lean();
-    console.log(pollingUnits)
     if (!pollingUnits)
         throw new Error('Ward does not exist.');
     return pollingUnits;

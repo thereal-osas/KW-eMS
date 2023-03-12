@@ -22,9 +22,12 @@ mongoose.connect(DBURI, {useNewUrlParser: true, useUnifiedTopology: true, autoIn
     console.log(error);
 });
 
-
-let baseUrl = "/Kwara";
-app.get(`${baseUrl}/lga/retrieve-identifiers`, lgaControllers.getLgaIdentifiers);
-app.get(`${baseUrl}/lga/retrieve-ward-identifiers`, lgaControllers.retrieveWardIdentifiers);
-app.get(`${baseUrl}/ward/retrieve-pollingUnit-identifiers`, wardControllers.retrieveWardsIdentifiers);
-app.get(`${baseUrl}/polling-unit/results`, pollingControllers.retrieveResultsInPollingUnit);
+const baseUrl = '/api/kws';
+const stateUrl = "state/:state";
+const lgaUrl = "lga/:lgaCode";
+const wardUrl = "ward/:wardCode";
+const resultsUrl = "polling-unit/:electionType";
+app.get(`${baseUrl}/${stateUrl}/lga/retrieve-identifiers`, lgaControllers.getLgaIdentifiers);
+app.get(`${baseUrl}/${stateUrl}/${lgaUrl}/retrieve-ward-identifiers`, lgaControllers.retrieveWardIdentifiers);
+app.get(`${baseUrl}/${stateUrl}/${lgaUrl}/${wardUrl}/retrieve-pollingUnit-identifiers`, wardControllers.retrieveWardsIdentifiers);
+app.get(`${baseUrl}/${stateUrl}/${lgaUrl}/${wardUrl}/${resultsUrl}/results`, pollingControllers.retrieveResultsInPollingUnit);
