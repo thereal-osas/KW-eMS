@@ -1,9 +1,8 @@
 const mongoose = require('mongoose').Mongoose;
 
 const resultSchema = new mongoose.Schema({
-    resultId: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: true
+    electionType: {
+        enum: ["Presidential", "Governorship", "House of reps"]
     },
     pollingUnit: {  //One-to-One relationship
         type: mongoose.SchemaTypes.ObjectId,
@@ -60,9 +59,18 @@ const resultSchema = new mongoose.Schema({
     ZLXP: {
         type: Number
     },
-    total: {
+    totalNumberOfVotes: {
         type: Number
-    }
+    },
+    // validVotes: {
+    //     type: Number
+    // },
+    // invalidVotes: {
+    //     type: Number
+    // },
+    // numberOfRegisteredVoters: {
+    //     type: Number
+    // }
 });
 
 module.exports = mongoose.model("Results", resultSchema);
