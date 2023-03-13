@@ -20,52 +20,52 @@ function ResultComponent() {
 			</div>
 
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
-				<span>APC</span>
-				<div className="w-1/2 flex items-center gap-3">
+				<span className="w-[15%]">APC</span>
+				<div className="w-3/5 flex items-center justify-end  gap-3">
 					<span>38%</span>
-					<div className="w-full  rounded-full h-2.5 bg-gray-600">
+					<div className="w-24  rounded-full h-2 bg-gray-600">
 						<div
-							className="bg-green-600 h-2.5 rounded-full"
+							className="bg-green-600 h-2 rounded-full"
 							style={{ width: APCwidth }}></div>
 					</div>
 				</div>
-				<span>29048</span>
+				<span className="w-1/5 text-end">29048</span>
 			</div>
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
-				<span>PDP</span>
-				<div className="w-1/2 flex items-center gap-3">
+				<span className="w-[15%]">PDP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
 					<span>19%</span>
-					<div className="w-full  rounded-full h-2.5 bg-gray-600">
+					<div className="w-24  rounded-full h-2 bg-gray-600">
 						<div
-							className="bg-blue-600 h-2.5 rounded-full"
+							className="bg-blue-600 h-2 rounded-full"
 							style={{ width: PDPwidth }}></div>
 					</div>
 				</div>
-				<span>9048</span>
+				<span className="w-1/5 text-end">9048</span>
 			</div>
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
-				<span>LP</span>
-				<div className="w-1/2 flex items-center gap-3">
+				<span className="w-[15%]">LP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
 					<span>29%</span>
-					<div className="w-full  rounded-full h-2.5 bg-gray-600">
+					<div className="w-24  rounded-full h-2 bg-gray-600">
 						<div
-							className="bg-red-600 h-2.5 rounded-full"
+							className="bg-red-600 h-2 rounded-full"
 							style={{ width: LPwidth }}></div>
 					</div>
 				</div>
-				<span>19048</span>
+				<span className="w-1/5 text-end">19048</span>
 			</div>
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
-				<span>SDP</span>
-				<div className="w-1/2 flex items-center gap-3">
-					<span>4%</span>
-					<div className="w-full  rounded-full h-2.5 bg-gray-600">
+				<span className="w-[15%]">SDP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>3%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
 						<div
-							className="bg-orange-600 h-2.5 rounded-full"
+							className="bg-orange-600 h-2 rounded-full"
 							style={{ width: SDPwidth }}></div>
 					</div>
 				</div>
-				<span>204</span>
+				<span className="w-1/5 text-end">204</span>
 			</div>
 			<button className="flex w-full  gap-3 items-center justify-center text-sm font-medium text-blue-500 p-5 border-b-[0.1px] border-gray-300">
 				<span>Scroll down for more</span>
