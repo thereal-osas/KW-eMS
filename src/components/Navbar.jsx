@@ -39,8 +39,8 @@ function Navbar() {
 						<Link
 							onClick={Toggleoff}
 							className="text-sm font-medium"
-							to="/live_results">
-							Live Results
+							to="/results">
+							Election Results
 						</Link>
 						<Link
 							onClick={Toggleoff}
@@ -79,8 +79,8 @@ function Navbar() {
 							<Link
 								onClick={Toggleoff}
 								className=""
-								to="/live_results">
-								Live Results
+								to="/results">
+								Election Results
 							</Link>
 							<Link
 								onClick={Toggleoff}

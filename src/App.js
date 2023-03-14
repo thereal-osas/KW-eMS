@@ -33,7 +33,7 @@ function App() {
 						element={<Home />}
 					/>
 					<Route
-						path="/live_results"
+						path="/results"
 						element={<LiveResult />}
 					/>
 					<Route
