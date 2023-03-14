@@ -18,3 +18,16 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #edf2ff;
 }
+.customscroll::-webkit-scrollbar {
+	width: 6px;
+}
+.customscroll ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+.customscroll::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 4px;
+}
+.customscroll::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

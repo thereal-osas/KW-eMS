@@ -65,7 +65,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "5",
 		name: "Alhaji Yakubu Gobir",
-		party: "",
+		party: "YPP",
 		age: "58",
 		about: `Alhaji Yakubu Gobir, a Wazirin Kasar Hausa, was born in London on October 19, 1965. His father, the
         late Ambassador Abubakar Garba Gobir, began his career in the Northern Nigerian government as a
@@ -83,7 +83,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "6",
 		name: "Mustapha Abdulkareem Abiodun",
-		party: "",
+		party: "PRP",
 		age: "51",
 		about: `Mustapha Abdulkareem Abiodun is currently running for governor in Kwara State. He is 51 years
         old and has the following qualifications: First School Leaving Certificate (F.S.L.C. ), WASSCE, and B.E. in
@@ -106,7 +106,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "8",
 		name: "Aliyu Ahmed",
-		party: "",
+		party: "AAC",
 		age: "42",
 		about: `Aliyu Ahmed is currently running for governor in Kwara State. He is 42 years old and has the following
         qualifications: FSLC (first school leaving certificate) and WAEC.
@@ -117,7 +117,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "9",
 		name: "Mogaji Dauda Salimon",
-		party: "AA1",
+		party: "AA",
 		age: "56",
 		about: `Mogaji Dauda Salimon is a male and the AA party candidate for the 2023 Kwara state gubernatorial
         election. He is 56 years old and has the following qualifications: FSLC (first school leaving certificate) and
@@ -129,7 +129,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "10",
 		name: "Ayo Joel",
-		party: "AA2",
+		party: "ADC",
 		age: "57",
 		about: `Ayo Joel is a male and the governorship candidate of the AA party for the 2023 Kwara state
         gubernatorial election. He is 57 years old
@@ -173,7 +173,7 @@ const Data = [
 		category: "gubernatorial",
 		id: "13",
 		name: "Abubakar Basambo Kabir",
-		party: "APM2",
+		party: "LP",
 		age: "35",
 		about: `Abubakar Basambo Kabir is 35 years old and the APM party candidate for the 2023 Kwara state
         gubernatorial election. 

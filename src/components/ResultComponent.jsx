@@ -8,7 +8,7 @@ function ResultComponent() {
 	const SDPwidth = "4%";
 
 	return (
-		<section className=" bg-white shadow-gray-500 shadow-lg hover:scale-105 duration-500  text-sm p-4 rounded-lg ">
+		<section className=" bg-white shadow-black/60 shadow-md overflow-y-scroll customscroll h-96 hover:scale-[1.02] duration-200  text-sm p-4 rounded-lg ">
 			<div className="flex justify-between font-medium p-4 border-b-[0.1px] border-gray-300">
 				<span>Asa</span>
 				<span>2023</span>
@@ -71,6 +71,140 @@ function ResultComponent() {
 				<span>Scroll down for more</span>
 				<FiArrowDown size={25} />
 			</button>
+			{/* Scroll */}
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">NNPP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">NRM</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">ADP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">APP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">APM</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">A</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">BP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">PRP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">AAC</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">YPP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+			<div className="flex  justify-between p-4 border-b-[0.1px] border-gray-300">
+				<span className="w-[15%]">ZLP</span>
+				<div className="w-3/5 flex items-center justify-end gap-3">
+					<span>1%</span>
+					<div className="w-24  rounded-full h-2 bg-gray-600">
+						<div
+							className="bg-red-900 h-2 rounded-full"
+							style={{ width: SDPwidth }}></div>
+					</div>
+				</div>
+				<span className="w-1/5 text-end">204</span>
+			</div>
+
 			<div className="flex flex-col gap-3 justify-center text-xs font-medium text-gray-500 p-4 border-b-[0.1px] border-gray-300">
 				<div className="flex gap-2">
 					<span>Registered Voters</span>
