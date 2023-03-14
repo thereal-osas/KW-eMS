@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import LiveResult from "./pages/LiveResult";
 import News from "./pages/News";
+import GubernatorialDetails from "./components/gubernatorialDetails";
 // import Presidential from "./pages/Presidential";
 // import Reps from "./pages/Reps";
 // import Senatorial from "./pages/Senatorial";
@@ -42,6 +43,10 @@ function App() {
 					<Route
 						path="/candidates/presidential/:name"
 						element={<PresidentialDetails />}
+					/>
+					<Route
+						path="/candidates/gubernatorial/:name"
+						element={<GubernatorialDetails />}
 					/>
 					<Route path="/candidates">
 						<Route

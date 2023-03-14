@@ -7,8 +7,8 @@ function PresidentialDetails() {
 	const item = Data.find((a) => a.party === name);
 	console.log(item);
 	return (
-		<>
-			<section className="max-w-3xl border-2 p-8 gap-8 mt-8 mx-auto shadow-md  flex flex-col md:flex-row">
+		<div className="px-6">
+			<section className="max-w-3xl  p-8 gap-8 mt-8 mx-auto shadow-md shadow-gray-600  flex flex-col md:flex-row">
 				<div className="w-80 mx-auto flex justify-center">
 					<img
 						className="h-72 w-60 flex justify-center items-center rounded-full"
@@ -38,8 +38,7 @@ function PresidentialDetails() {
 					<div className="xs:text-lg text-gray-800">{item.about}</div>
 				</div>
 			</section>
-			;
-		</>
+		</div>
 	);
 }
 
