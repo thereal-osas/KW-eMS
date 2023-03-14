@@ -49,6 +49,9 @@ function Navbar() {
 							News
 						</Link>
 					</div>
+					<button className="bg-[#1748C9] sm:flex hidden text-white px-4 py-1 rounded-2xl">
+						Interactive Map
+					</button>
 
 					<button
 						className="flex sm:hidden duration-1000 "
@@ -59,7 +62,7 @@ function Navbar() {
 			</main>
 			<aside className="sm:hidden">
 				<div
-					className={`z-50 duration-1000 p-10  fixed top-10 left-0 right-0 bottom-1/2 ${
+					className={`z-50 duration-1000 p-10  fixed top-10 left-0 right-0 bottom-1/3 ${
 						Open ? "bg-[#f4f7ff] " : " bg-[#f4f7ff] -translate-y-full "
 					}`}>
 					<div className="flex space-y-10 sm:hidden flex-col justify-center items-center text-black">
