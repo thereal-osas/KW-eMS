@@ -1,7 +1,7 @@
 import React from "react";
 import { FiArrowDown } from "react-icons/fi";
 
-function ResultComponent() {
+function ResultComponent({ data }) {
 	const APCwidth = "45%";
 	const PDPwidth = "19%";
 	const LPwidth = "29%";
@@ -9,8 +9,8 @@ function ResultComponent() {
 
 	return (
 		<section className=" bg-white shadow-black/60 shadow-md overflow-y-scroll customscroll h-96 hover:scale-[1.02] duration-200  text-sm p-4 rounded-lg ">
-			<div className="flex justify-between font-medium p-4 border-b-[0.1px] border-gray-300">
-				<span>Asa</span>
+			<div className="flex justify-between font-semibold p-4 border-b-[0.1px] border-gray-300">
+				<span>{data}</span>
 				<span>2023</span>
 			</div>
 			<div className="justify-between flex p-4 border-b-[0.1px] border-gray-300">
