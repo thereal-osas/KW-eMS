@@ -21,8 +21,8 @@ body {
 .customscroll::-webkit-scrollbar {
 	width: 6px;
 }
-.customscroll ::-webkit-scrollbar-track {
-	background: #f1f1f1;
+.customscroll::-webkit-scrollbar-track {
+	background: white;
 }
 .customscroll::-webkit-scrollbar-thumb {
 	background: #888;
@@ -31,3 +31,12 @@ body {
 .customscroll::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+/* .ward_title span {
+	width: 10rem;
+	border: 2px;
+	font-weight: 900;
+	border: #555;
+} */
+/* .polling {
+	width: 15rem !important;
+} */

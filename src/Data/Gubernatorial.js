@@ -171,7 +171,7 @@ const Data = [
 	},
 	{
 		category: "gubernatorial",
-		id: "13",
+		id: "14",
 		name: "Abubakar Basambo Kabir",
 		party: "LP",
 		age: "35",

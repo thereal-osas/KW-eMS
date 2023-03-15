@@ -1,5 +1,6 @@
 import React from "react";
 import { FiArrowDown } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function ResultComponent({ data }) {
 	const APCwidth = "45%";
@@ -217,7 +218,11 @@ function ResultComponent({ data }) {
 				<div>Results from 16 out 0f 16 LGA</div>
 			</div>
 
-			<div></div>
+			<Link
+				className="w-full  justify-center flex text-sm font-medium text-blue-500 p-5 border-b-[0.1px] border-gray-300"
+				to={`/results/kwara/${data}`}>
+				View Result Details
+			</Link>
 		</section>
 	);
 }
