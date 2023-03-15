@@ -3,8 +3,12 @@ import { Fragment } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 // import { IoFootball } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggle } from "../redux/appSlice";
 
 export default function Navmenu() {
+	const dispatch = useDispatch();
+
 	return (
 		<div className=" text-right">
 			<Menu
@@ -32,6 +36,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/presidential"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -43,6 +48,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/gubernatorial"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -54,6 +60,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/senatorial"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -65,6 +72,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/house_of_reps"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
