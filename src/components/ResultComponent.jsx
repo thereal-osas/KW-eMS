@@ -8,8 +8,8 @@ function ResultComponent({ data }) {
 	const SDPwidth = "4%";
 
 	return (
-		<section className=" bg-white shadow-black/60 shadow-md overflow-y-scroll customscroll h-96 hover:scale-[1.02] duration-200  text-sm p-4 rounded-lg ">
-			<div className="flex justify-between font-semibold p-4 border-b-[0.1px] border-gray-300">
+		<section className=" bg-white shadow-black/60 shadow-md overflow-y-scroll customscroll h-96 hover:scale-[1.02] duration-200  text-sm px-4 pb-4 rounded-lg ">
+			<div className="flex justify-between font-semibold sticky top-0 bg-white  p-4 border-b-[0.1px] border-gray-300">
 				<span>{data}</span>
 				<span>2023</span>
 			</div>
