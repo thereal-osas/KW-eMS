@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Navmenu from "./Navmenu";
 import Logo from "../assets/Logo.PNG";
+import { useDispatch, useSelector } from "react-redux";
+import { toggle, toggleOff } from "../redux/appSlice";
 
 function Navbar() {
-	const [Open, setOpen] = useState(false);
+	const dispatch = useDispatch();
 
-	const Toggle = () => {
-		setOpen(!Open);
-	};
-	const Toggleoff = () => {
-		setOpen(false);
-	};
+	const { navOpen } = useSelector((state) => state.app);
 
 	return (
 		<section className="mb-12">
@@ -25,7 +22,7 @@ function Navbar() {
 					/>
 					<div className="hidden space-x-6 sm:flex items-center">
 						<Link
-							onClick={Toggleoff}
+							onClick={() => dispatch(toggleOff())}
 							className="text-sm font-medium"
 							to="/">
 							Home
@@ -37,35 +34,38 @@ function Navbar() {
 							Candidates
 						</Link> */}
 						<Link
-							onClick={Toggleoff}
+							onClick={() => dispatch(toggle())}
 							className="text-sm font-medium"
-							to="/live_results">
-							Live Results
+							to="/results">
+							Election Results
 						</Link>
 						<Link
-							onClick={Toggleoff}
+							onClick={() => dispatch(toggle())}
 							className="text-sm font-medium"
 							to="/news">
 							News
 						</Link>
 					</div>
+					<button className="bg-[#1748C9] sm:flex hidden text-white px-4 py-1 rounded-2xl">
+						Interactive Map
+					</button>
 
 					<button
 						className="flex sm:hidden duration-1000 "
-						onClick={Toggle}>
-						{Open ? <FaTimes size={25} /> : <FaBars size={25} />}
+						onClick={() => dispatch(toggle())}>
+						{navOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
 					</button>
 				</div>
 			</main>
 			<aside className="sm:hidden">
 				<div
-					className={`z-50 duration-1000 p-10  fixed top-10 left-0 right-0 bottom-1/2 ${
-						Open ? "bg-[#f4f7ff] " : " bg-[#f4f7ff] -translate-y-full "
+					className={`z-50 duration-1000 p-10  fixed top-10 left-0 right-0 bottom-1/3 ${
+						navOpen ? "bg-[#f4f7ff] " : " bg-[#f4f7ff] -translate-y-full "
 					}`}>
 					<div className="flex space-y-10 sm:hidden flex-col justify-center items-center text-black">
 						<div className="sm:hidden flex flex-col items-center  justify-around   text-xl font-semibold gap-4">
 							<Link
-								onClick={Toggleoff}
+								onClick={() => dispatch(toggle())}
 								className=""
 								to="/">
 								Home
@@ -74,13 +74,13 @@ function Navbar() {
 							<Navmenu className="text-white" />
 
 							<Link
-								onClick={Toggleoff}
+								onClick={() => dispatch(toggle())}
 								className=""
-								to="/live_results">
-								Live Results
+								to="/results">
+								Election Results
 							</Link>
 							<Link
-								onClick={Toggleoff}
+								onClick={() => dispatch(toggle())}
 								className=""
 								to="/news">
 								News
