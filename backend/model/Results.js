@@ -1,76 +1,118 @@
-const mongoose = require('mongoose').Mongoose;
+const {Schema, SchemaTypes: {ObjectId}, model} = require('mongoose');
 
-const resultSchema = new mongoose.Schema({
+const resultSchema = new Schema({
     electionType: {
-        enum: ["Presidential", "Governorship", "House of reps"]
+        enum: ["Presidential", "Governorship", "House of reps"],
+        type: String,
+        required: true
     },
     pollingUnit: {  //One-to-One relationship
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'PollingUnit'
+        type: ObjectId,
+        ref: 'PollingUnit',
+        required: true
+    },
+    transcriptionCount: {
+        type: Number,
+        required: true
+    },
+    resultSheetStamped: {
+        type: Boolean,
+        required: true
+    },
+    resultSheetCorrected: {
+        type: Boolean,
+        required: true
+    },
+    resultSheetInvalid: {
+        type: Boolean,
+        required: true
+    },
+    resultSheetUnclear: {
+        type: Boolean,
+        required: true
+    },
+    resultSheetUnsigned: {
+        type: String,
+        required: true
+    }, resultsFound: {
+        type: Boolean
+    },
+    resultLink: {
+        type: String,
+        required: true
     },
     A: {
-        type: Number
+        type: Number,
+        default: null
     },
     AA: {
-        type: Number
+        type: Number,
+        default: null
     },
     AAC: {
-        type: Number
+        type: Number,
+        default: null
     },
     ADC: {
-        type: Number
+        type: Number,
+        default: null
     },
     ADP: {
-        type: Number
+        type: Number,
+        default: null
     },
     APC: {
-        type: Number
+        type: Number,
+        required: true
     },
     APGA: {
-        type: Number
+        type: Number,
+        default: null
     },
     APM: {
-        type: Number
+        type: Number,
+        default: null
     },
     APP: {
-        type: Number
+        type: Number,
+        default: null
     },
     BP: {
-        type: Number
+        type: Number,
+        default: null
     },
     LP: {
-        type: Number
+        type: Number,
+        required: true
     },
     NNPP: {
-        type: Number
+        type: Number,
+        required: true
     },
     PDP: {
-        type: Number
+        type: Number,
+        required: true
     },
     PRP: {
-        type: Number
+        type: Number,
+        default: null
     },
     SDP: {
-        type: Number
+        type: Number,
+        default: null
     },
     YPP: {
-        type: Number
+        type: Number,
+        default: null
     },
     ZLXP: {
-        type: Number
+        type: Number,
+        default: null
     },
-    totalNumberOfVotes: {
-        type: Number
-    },
-    // validVotes: {
-    //     type: Number
-    // },
-    // invalidVotes: {
-    //     type: Number
-    // },
-    // numberOfRegisteredVoters: {
-    //     type: Number
-    // }
+    accreditedVoters: {
+        type: Number,
+        required: true
+    }
 });
 
-module.exports = mongoose.model("Results", resultSchema);
+module.exports = model("Results", resultSchema);

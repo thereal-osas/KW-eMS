@@ -1,28 +1,38 @@
-const mongoose = require('mongoose');
-const pollingUnitSchema = new mongoose.Schema({
+const {Schema, SchemaTypes: {ObjectId}, model} = require('mongoose');
+const pollingUnitSchema = new Schema({
     ward: {
-        type: mongoose.SchemaTypes.ObjectId, ref: 'Ward'
+        type: ObjectId,
+        ref: 'Ward',
+        required: true
     }, pollingUnitName: {
-        type: String, index: true
+        type: String,
+        index: true,
+        required: true
     }, pollingUnitCode: {
-        type: String, index: true
-    }, results: [{ //One-to-Many relationship
-        type: mongoose.SchemaTypes.ObjectId, ref: 'Results'
+        type: String,
+        index: true,
+        required: true,
+        unique: true
+    },
+    registeredVoters: {
+        type: Number
+    },
+    results: [{ //One-to-Many relationship //a polling Unit can have 3 types of results{Presidential,Governorship,House of reps}
+        type: ObjectId, ref: 'Results'
     }]
 });
 
-pollingUnitSchema.statics.retrieveAllResults = async function (pollingUnitCode, lgaCode, wardCode, state, electionType) {
-    if (!results) throw new Error("PollingUnit does not exist.");
-    const results = await this.findOne({pollingUnitCode})
-        .populate({path: "results", match: {electionType}, select: "-pollingUnit"})
-        .populate({
-            path: "ward",
-            match: {wardCode},
-            populate: {populate: "lga", match: {lgaCode, state}},
-            select: "wardName wardCode"
-        })
-        .select("ward pollingUnitName pollingUnitCode results").lean();
+//retrieves polling unit results of a particular polling unit by its code,wardName, and election type.
+pollingUnitSchema.statics.retrievePollingUnitResults = async function (pollingUnitCode, wardName, electionType) {
+    const results = await this.findOne({pollingUnitCode})//retrieve a polling unit using its code
+        .populate({path: "ward", match: {wardName}, select: {wardName}})
+        .populate({path: "results", match: {electionType}, select: "-electionType -pollingUnit"})
+        .lean();
+    if (!results)
+        throw new Error("No results found for this polling unit.");
+    if (results.ward === null || results.results === null)
+        throw new Error(`${electionType} result was not found from this polling unit.`);
     return results;
 }
 
-module.exports = mongoose.model('PollingUnit', pollingUnitSchema)
+module.exports = model('PollingUnit', pollingUnitSchema);

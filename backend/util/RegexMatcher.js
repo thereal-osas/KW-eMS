@@ -1,4 +1,4 @@
-const pollingUnitRegex = /^\d{2}\/\d{2}\/\d{2}\/\d{3}$/;
+const pollingUnitRegex = /^\d{2}-\d{2}-\d{2}-\d{3}$/;
 
 module.exports.pollingUnitMatcher = (pollingUnitCode) => {
     if (pollingUnitCode === undefined)
@@ -7,10 +7,3 @@ module.exports.pollingUnitMatcher = (pollingUnitCode) => {
     if (!matches)
         throw new Error(`${pollingUnitCode} is not a supported format.`);
 };
-
-module.exports.lengthMatcher = (input, desiredLength = 2) => {
-    if (input === undefined)
-        throw new Error("Unsupported format");
-    if (input.length !== desiredLength)
-        throw new Error(`${input} is not a valid input`);
-}

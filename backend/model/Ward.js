@@ -1,38 +1,44 @@
-const mongoose = require('mongoose');
-const wardSchema = new mongoose.Schema({
+const {Schema, SchemaTypes: {ObjectId}, model} = require('mongoose');
+const wardSchema = new Schema({
     lga: {
-        type: mongoose.SchemaTypes.ObjectId,
+        type: ObjectId,
         ref: 'LocalGovernmentArea',
-    },
-    wardCode: {
-        type: Number,
-        index: true
     },
     wardName: {
         type: String,
-        index: true
+        index: true,
+        unique: true
     },
     pollingUnits: [{ //One-to-Many relationship
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'PollingUnit'
+        type: ObjectId,
+        ref: 'PollingUnit',
+        unique: true
     }]
 });
 
-
-//retrieve all PollingUnits Identifiers(name and code) of a particular Ward by its code.
-wardSchema.statics.retrieveAllPollingUnitsIdentifiers = async function (state, lgaCode, wardCode) {
-    //use the wardCode to return all pollingUnits identifiers.
-    const pollingUnits = await this.findOne({wardCode})
+//checked
+//retrieve all PollingUnits Identifiers(name and code) of a particular Ward by the lgaName,wardName,state.
+wardSchema.statics.retrieveAllPollingUnitsIdentifiers = async function (state, lgaName, wardName) {
+    //use the wardName to return all pollingUnits identifiers.
+    let pollingUnit = await this.find({wardName})
+        .populate({path: "lga", select: "lgaName state"})
         .populate({path: "pollingUnits", select: "pollingUnitName pollingUnitCode"})
-        .populate({path: "lga", match: {lgaCode, state}})
-        .select("pollingUnits").lean();
-    if (!pollingUnits)
-        throw new Error('Ward does not exist.');
-    return pollingUnits;
+        .select("pollingUnits")
+        .lean();
+    let found = false;
+    let poll;
+    pollingUnit.forEach(unit => {
+        poll = unit;
+        if (unit.lga === null || unit.pollingUnits === null) {
+            return;
+        }
+        if (unit.lga.lgaName !== lgaName || unit.lga.state !== state)
+            return;
+        found = true;
+    });
+    if (!found)
+        throw new Error('No polling units were found...');
+    return poll;
 }
 
-// wardSchema.statics.retrieveAllPollingUnits = async function (wardCode) {
-//     use the wardCode to return all pollingUnits.
-// }
-
-module.exports = mongoose.model('Ward', wardSchema);
+module.exports = model('Ward', wardSchema);
