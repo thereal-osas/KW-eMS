@@ -1,18 +1,15 @@
-import React from 'react'
-import { FaTimes, FaBars } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import Navmenu from './Navmenu'
+import React from "react";
+import { FaTimes, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Navmenu from "./Navmenu";
 import Logo from "../assets/Logo.PNG";
 import { useDispatch, useSelector } from "react-redux";
 import { toggle, toggleOff } from "../redux/appSlice";
 
 function Navbar() {
-  const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	const { navOpen } = useSelector((state) => state.app);
-  const Toggle = () => {
-    setOpen(!Open)
-  }
 
 	return (
 		<section className="mb-12">
@@ -89,11 +86,9 @@ function Navbar() {
 								News
 							</Link>
 							<div>
-								<Link to='/interactive_map'>
 								<button className="bg-[#1748C9] text-white px-4 py-1 rounded-2xl">
 									Interactive Map
 								</button>
-								</Link>
 							</div>
 						</div>
 					</div>
@@ -103,4 +98,4 @@ function Navbar() {
 	);
 }
 
-export default Navbar
+export default Navbar;
