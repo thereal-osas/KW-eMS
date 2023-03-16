@@ -8,7 +8,7 @@ import { formatNumber } from '../utils/global';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function Presidential() {
+function PresidentialMap() {
 	const Data = [
 		{
 			id: '1',
@@ -360,4 +360,4 @@ function Presidential() {
 	);
 }
 
-export default Presidential;
+export default PresidentialMap;
