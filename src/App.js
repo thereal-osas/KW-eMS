@@ -34,6 +34,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/live_results' element={<LiveResult />} />
           <Route path='/news' element={<News />} />
+										 <Route path='/live_results' element={<LiveResult />} />
           <Route path='/candidates'>
             <Route path='presidential' element={<Presidential />} />
             <Route path='senatorial' element={<Senatorial />} />

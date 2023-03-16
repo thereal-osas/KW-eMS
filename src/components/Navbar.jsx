@@ -89,9 +89,11 @@ function Navbar() {
 								News
 							</Link>
 							<div>
+								<Link to='/interactive_map'>
 								<button className="bg-[#1748C9] text-white px-4 py-1 rounded-2xl">
 									Interactive Map
 								</button>
+								</Link>
 							</div>
 						</div>
 					</div>
