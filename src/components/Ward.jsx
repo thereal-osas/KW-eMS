@@ -13,24 +13,12 @@ function Ward({ name }) {
 					<div className="font-extrabold pl-0.5">S/N</div>
 					<div className=" w-[240px]  font-extrabold   ">POLLING UNIT</div>
 				</div>
-				<div className="text-center min-w-[50px] ">A</div>
-				<div className="text-center min-w-[50px] ">AA</div>
-				<div className="text-center min-w-[50px] ">AAC</div>
-				<div className="text-center min-w-[50px] ">ADC</div>
-				<div className="text-center min-w-[50px] ">ADP</div>
+
 				<div className="text-center min-w-[50px] ">APC</div>
-				<div className="text-center min-w-[50px] ">APGA</div>
-				<div className="text-center min-w-[50px] ">APM</div>
-				<div className="text-center min-w-[50px] ">APP</div>
-				<div className="text-center min-w-[50px] ">BP</div>
 				<div className="text-center min-w-[50px] ">LP</div>
 				<div className="text-center min-w-[50px] ">NNPP</div>
-				<div className="text-center min-w-[50px] ">NRM</div>
 				<div className="text-center min-w-[50px] ">PDP</div>
-				<div className="text-center min-w-[50px] ">PRP</div>
-				<div className="text-center min-w-[50px] ">SDP</div>
-				<div className="text-center min-w-[50px] ">YPP</div>
-				<div className="text-center min-w-[50px] ">ZLP</div>
+
 				<div className="text-center min-w-[100px] ">Total Votes</div>
 				<div className=" min-w-[100px] ">Accredited Voters</div>
 				<div className=" min-w-[100px]  ">Registered Voters</div>
@@ -47,24 +35,13 @@ function Ward({ name }) {
 								{a["PU-Name"]}
 							</div>
 						</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
+
 						<div className="text-center min-w-[50px]">{a.APC}</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
+
 						<div className="text-center min-w-[50px]">{a.LP}</div>
 						<div className="text-center min-w-[50px]">{a.NNPP}</div>
-						<div className="text-center min-w-[50px]">N/A</div>
 						<div className="text-center min-w-[50px]">{a.PDP}</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
-						<div className="text-center min-w-[50px]">N/A</div>
+
 						<div className="text-center min-w-[100px]">
 							{a.LP + a.NNPP + a.PDP + a.APC}
 						</div>

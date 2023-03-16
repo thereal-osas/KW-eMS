@@ -14,7 +14,7 @@ const Kwara = [
 	"Offa",
 	"Oke - Ero",
 	"Oyun",
-	"Pategi",
+	"Patigi",
 ];
 
 export default Kwara;
