@@ -3,18 +3,22 @@ import { Fragment } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 // import { IoFootball } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggle } from "../redux/appSlice";
 
 export default function Navmenu() {
+	const dispatch = useDispatch();
+
 	return (
 		<div className=" text-right">
 			<Menu
 				as="div"
 				className="relative inline-block text-left">
 				<div>
-					<Menu.Button className="inline-flex w-full justify-center rounded-md  text-sm font-medium text-black  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+					<Menu.Button className="inline-flex w-full justify-center items-center rounded-md  sm:text-sm font-semibold sm:font-medium text-black  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
 						Candidates
 						<ChevronDownIcon
-							className="ml-2 -mr-1 h-5 w-5 text-black "
+							className="ml-2 -mr-1 h-5 w-5  text-black "
 							aria-hidden="true"
 						/>
 					</Menu.Button>
@@ -32,6 +36,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/presidential"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -43,6 +48,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/gubernatorial"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -54,6 +60,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/senatorial"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -65,6 +72,7 @@ export default function Navmenu() {
 							<Menu.Item>
 								{({ active }) => (
 									<Link
+										onClick={() => dispatch(toggle())}
 										to="candidates/house_of_reps"
 										className={`${
 											active ? "bg-blue-500 text-white" : "text-gray-900"

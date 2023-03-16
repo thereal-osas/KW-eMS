@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
-
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Loader from './components/loader'
 
@@ -11,6 +12,8 @@ import Error from './pages/Error'
 import LiveResult from './pages/LiveResult'
 import News from './pages/News'
 import PresidentialMap from './pages/PresidentialMap'
+import GubernatorialDetails from "./components/gubernatorialDetails";
+import LGA from "./components/LGA";
 // import Presidential from "./pages/Presidential";
 // import Reps from "./pages/Reps";
 // import Senatorial from "./pages/Senatorial";
@@ -18,6 +21,9 @@ const Presidential = lazy(() => import('./pages/Presidential'))
 const Gubernatorial = lazy(() => import('./pages/Gubernatorial'))
 const Senatorial = lazy(() => import('./pages/Senatorial'))
 const Reps = lazy(() => import('./pages/Reps'))
+const PresidentialDetails = lazy(() =>
+	import("./components/presidentialDetails")
+);
 
 function App() {
   return (
