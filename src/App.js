@@ -12,6 +12,7 @@ import GubernatorialDetails from "./components/gubernatorialDetails";
 import LGA from "./components/LGA";
 import PresidentialMap from "./pages/PresidentialMap";
 import TrackResult from "./pages/TrackResult";
+import StateResult from "./pages/StateResult";
 
 const Presidential = lazy(() => import("./pages/Presidential"));
 const Gubernatorial = lazy(() => import("./pages/Gubernatorial"));
@@ -39,7 +40,7 @@ function App() {
 					<Route path="/results">
 						<Route
 							index
-							element={<TrackResult />}
+							element={<StateResult />}
 						/>
 
 						<Route
