@@ -51,7 +51,7 @@ function StateResult() {
 						2023 Presidential Results
 					</h3>
 				</div>
-				<div className="mt-10 md:mt-30 w-full md:h-[20rem] mx-auto">
+				<div className="mt-10 md:mt-30 w-full h-[10rem] md:h-[20rem] mx-auto">
 					<Doughnut
 						data={data}
 						options={electionStatusReportOptions}
