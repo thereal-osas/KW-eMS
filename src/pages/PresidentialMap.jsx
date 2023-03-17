@@ -75,7 +75,7 @@ function PresidentialMap() {
     { name: 'PDP', color: '#F93535', total: 243400, percentage: 45 },
     { name: 'APC', color: '#F9AB35', total: 27503, percentage: 15 },
     { name: 'LP', color: '#356CF9', total: 23400, percentage: 18 },
-    { name: 'AA', color: '#34C759', total: 12700, percentage: 1 },
+    { name: 'SDP', color: '#34C759', total: 12700, percentage: 1 },
     { name: 'NNPP', color: '#34C759', total: 1680, percentage: 20 },
   ]
 
@@ -126,14 +126,14 @@ function PresidentialMap() {
                     baseBgColor='#E2E9FC'
                     labelAlignment='center'
                     completed={Number(candidate.id) * 20}
-                    className='w-20'
+                    className='w-20 md:ml-32'
                   />
                 </div>
               ))}
             </div>
           </div>
 
-          <div className=''>
+          {/* <div className=''>
             <p className='pb-8 mt-8 md:mt-0'>Overdue work</p>
             <div className='flex flex-col gap-y-5'>
               <div className='flex items-center gap-x-2'>
@@ -190,7 +190,7 @@ function PresidentialMap() {
                 0 jobs created with no time
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className='flex flex-col md:flex-row justify-between mt-[3.625rem] mb-[4.25rem]'>
@@ -289,7 +289,7 @@ function PresidentialMap() {
         </div>
       </div>
 
-      <div className='bg-[#EAF2FF]'>
+      {/* <div className='bg-[#EAF2FF]'>
         <div className='px-8 md:px-16 py-[4.8125rem]'>
           <p className='font-normal text-lg md:text-xl'>
             The Independent National Electoral Commission, INEC, has announced
@@ -326,13 +326,13 @@ function PresidentialMap() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className='px-8 md:px-16 flex flex-col gap-y-20 mt-10 mb-20 md:my-[7.5rem]'>
         {results.map((result, index) => (
           <div
             key={index}
-            className='result-card bg-no-repeat bg-cover bg-center h-40 md:h-[24.875rem] mt-[-40px] mx-auto w-[97%] rounded-[1.625rem] text-white flex justify-end items-end'
+            className='result-card bg-no-repeat bg-cover bg-center h-40 md:h-[24.875rem] mx-auto w-[97%] rounded-[1.625rem] text-white flex justify-end items-end'
           >
             <div className='mr-10 mb-8 font-medium text-2xl'>
               {result.type} Result
