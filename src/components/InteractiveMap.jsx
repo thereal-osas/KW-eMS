@@ -19,9 +19,11 @@ function InteractiveMap() {
             <img className='w-3/4 md:w-2/4  mx-auto' src={map} alt='Map' />
           </div>
           <div className='text-center mt-10'>
+            <Link to='/map'>
             <button className='px-4 py-2 bg-[#336DFF] text-sm text-white font-semibold rounded-lg hover:bg-[#adc5ff] hover:text-[#000] transition ease-in duration-150'>
               Interactive Map
             </button>
+            <Link />
           </div>
         </div>
       </div>
