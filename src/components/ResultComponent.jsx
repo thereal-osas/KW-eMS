@@ -95,7 +95,7 @@ function ResultComponent({ data }) {
 				<span className="w-1/5 text-end">{Lp}</span>
 			</div>
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
-				<span className="w-[15%]">SDP</span>
+				<span className="w-[15%]">NNPP</span>
 				<div className="w-3/5 flex items-center justify-end gap-3">
 					<span className="flex">
 						{NNPPwidth.toFixed(1)}

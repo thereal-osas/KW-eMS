@@ -47,10 +47,6 @@ function ResultPresidential() {
 						id="year"
 						className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg  w-60 px-2.5 py-1  ">
 						<option value="2023">2023</option>
-						<option value="2019">2019</option>
-						<option value="2015">2015</option>
-						<option value="2011">2011</option>
-						<option value="2006">2006</option>
 					</select>
 				</div>
 			</div>

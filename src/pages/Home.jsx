@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import InteractiveMap from "../components/InteractiveMap";
 import LiveResult from "../components/LiveResult";
 import NewsArticles from "../components/NewsArticles";
-import Data from "../Data/Kwara";
+// import Data from "../Data/Kwara";
 
 function Home() {
 	// const OverallStat = Data.map((a) => [
