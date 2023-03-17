@@ -45,7 +45,7 @@ function Footer() {
 			</div>
 			<div className="text-center flex  md:flex-row items-center justify-around w-full flex-col gap-2 mt-20">
 				<div className="text-lg font-semibold sm:text-xl">
-					<span>(c) Copyright 2022. All right reserved.</span>
+					<span>(c) Copyright 2023. All right reserved.</span>
 				</div>
 				<div className=" text-lg font-semibold sm:text-xl">
 					Terms of Service <span className="px-3">|</span>Privacy Policy
