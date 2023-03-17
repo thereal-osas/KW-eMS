@@ -263,7 +263,7 @@ function PresidentialMap() {
       </div>
 
       <div className=' flex justify-center items-center h-[646px] bg-blue-200'>
-        COMING SOON
+        MAP COMING SOON
       </div>
 
       <div className='container grid grid-cols-4 gap-[3.635rem] py-[7.4375rem]'>
@@ -302,7 +302,7 @@ function PresidentialMap() {
       </div>
 
       <div className=' flex justify-center items-center h-[646px] bg-blue-200'>
-        COMING SOON
+        MAP COMING SOON
       </div>
 
       <div className='bg-[#EAF2FF]'>
