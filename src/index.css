@@ -31,6 +31,15 @@ body {
 .customscroll::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+
+.container {
+	@apply max-w-[90rem] mx-auto px-7 lg:px-[5.375rem];
+}
+
+.result-card {
+	background-image: url('/public/result-card-bg.png');
+}
+
 /* .ward_title span {
 	width: 10rem;
 	border: 2px;
