@@ -132,7 +132,7 @@ function Navbar() {
               News
             </Link>
           </div>
-          <Link to='/map'>
+          <Link onClick={() => setnavState(false)} to='/map'>
             <button className='bg-[#1748C9] sm:flex hidden text-white px-4 py-1 rounded-2xl'>
               Interactive Map
             </button>
@@ -258,7 +258,7 @@ function Navbar() {
                 News
               </Link>
               <div>
-                <Link to='/map'>
+                <Link onClick={() => setnavState(false)} to='/map'>
                   <button className='bg-[#1748C9] text-white px-4 py-1 rounded-2xl'>
                     Interactive Map
                   </button>
