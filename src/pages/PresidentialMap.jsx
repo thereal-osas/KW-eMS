@@ -5,6 +5,8 @@ import ProgressBar from '@ramonak/react-progress-bar'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { formatNumber } from '../utils/global'
+import map1 from '../assets/map1.svg'
+import map2 from '../assets/map2.svg'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -86,126 +88,112 @@ function PresidentialMap() {
 
   return (
     <>
-      <div className='container grid grid-cols-3 pt-[5.5625rem] gap-x-14'>
-        <div className=''>
-          <p className='pb-8'>Election Status Report</p>
-          <div className='w-full h-[13.5rem]'>
-            <Doughnut data={data} options={electionStatusReportOptions} />
-          </div>
-        </div>
-        <div className=''>
-          <p className='pb-8 flex justify-between'>
-            Leading Candidates
-            <button className='text-[#356CF9] flex items-center'>
-              See All
-              <svg
-                width='17'
-                height='16'
-                viewBox='0 0 17 16'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M6.34164 2.64645C6.5369 2.45118 6.85348 2.45118 7.04874 2.64645L12.0487 7.64645C12.244 7.84171 12.244 8.15829 12.0487 8.35355L7.04874 13.3536C6.85348 13.5488 6.5369 13.5488 6.34164 13.3536C6.14637 13.1583 6.14637 12.8417 6.34164 12.6464L10.9881 8L6.34164 3.35355C6.14637 3.15829 6.14637 2.84171 6.34164 2.64645Z'
-                  fill='#356CF9'
-                  stroke='#356CF9'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                />
-              </svg>
-            </button>
-          </p>
-
-          <div className='flex flex-col gap-y-6'>
-            {Data.map((candidate, index) => (
-              <div key={index} className='flex items-center'>
-                <img
-                  className='w-[48px] h-[48px] object-cover rounded-full mr-3'
-                  src={candidate.image}
-                  alt={candidate.name}
-                />
-                <div className='flex flex-col grow'>
-                  <span className='text-[#212633] font-medium'>
-                    {candidate.name}
-                  </span>
-                  <span className='text-[#8E9ABB] font-medium'>
-                    7/10 job done
-                  </span>
-                </div>
-                <ProgressBar
-                  height='32px'
-                  borderRadius='24px'
-                  bgColor='#6498FB'
-                  baseBgColor='#E2E9FC'
-                  labelAlignment='center'
-                  completed={Number(candidate.id) * 20}
-                  className='w-20'
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className=''>
-          <p className='pb-8'>Overdue work</p>
-          <div className='flex flex-col gap-y-5'>
-            <div className='flex items-center gap-x-2'>
-              <div className='w-[4.60125rem] h-[4.60125rem] flex items-center'>
-                <CircularProgressbar
-                  value={38}
-                  text={`${38}%`}
-                  styles={buildStyles({
-                    pathColor: '#F93535',
-                    textColor: '#212633',
-                    trailColor: '#F3F6FF',
-                  })}
-                />
-              </div>
-
-              <span className='text-[#F93535] text-[3.5625rem] align-middle'>
-                06
-              </span>
-
-              <div className='flex flex-col'>
-                <div>Overdue work</div>
-                <div>
-                  More than <span className='text-[#356CF9]'>32</span> jobs in
-                  progress
-                </div>
-              </div>
+      <div className='pt-12 md:pt-[5.5625rem] px-8 md:px-16'>
+        <div className='flex flex-col md:flex-row mx-auto justify-between'>
+          <div className=''>
+            <p className='pb-8 text-center md:text-left'>
+              Election Status Report
+            </p>
+            <div className='w-full md:w-[25.5rem] md:h-[13rem]'>
+              <Doughnut data={data} options={electionStatusReportOptions} />
             </div>
-            <div className='flex items-center gap-x-2'>
-              <div className='w-[4.60125rem] h-[4.60125rem] flex items-center'>
-                <CircularProgressbar
-                  value={62}
-                  text={`${62}%`}
-                  styles={buildStyles({
-                    pathColor: '#F9AB35',
-                    textColor: '#212633',
-                    trailColor: '#F3F6FF',
-                  })}
-                />
-              </div>
+          </div>
 
-              <span className='text-[#F9AB35] text-[3.5625rem] align-middle'>
-                19
-              </span>
+          <div className=''>
+            <p className='pb-8 mt-8 md:mt-0 flex justify-between'>
+              Leading Candidates
+            </p>
+            <div className='flex flex-col gap-y-6'>
+              {Data.map((candidate, index) => (
+                <div key={index} className='flex items-center'>
+                  <img
+                    className='w-[48px] h-[48px] object-cover rounded-full mr-3'
+                    src={candidate.image}
+                    alt={candidate.name}
+                  />
+                  <div className='flex flex-col grow'>
+                    <span className='text-[#212633] font-medium'>
+                      {candidate.name}
+                    </span>
+                    <span className='text-[#8E9ABB] font-medium'>
+                      7/10 job done
+                    </span>
+                  </div>
+                  <ProgressBar
+                    height='32px'
+                    borderRadius='24px'
+                    bgColor='#6498FB'
+                    baseBgColor='#E2E9FC'
+                    labelAlignment='center'
+                    completed={Number(candidate.id) * 20}
+                    className='w-20'
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
-              <div className='flex flex-col'>
-                <div>Work finished late</div>
-                <div>
-                  More than <span className='text-[#356CF9]'>32</span> jobs in
-                  progress
+          <div className=''>
+            <p className='pb-8 mt-8 md:mt-0'>Overdue work</p>
+            <div className='flex flex-col gap-y-5'>
+              <div className='flex items-center gap-x-2'>
+                <div className='w-[4.60125rem] h-[4.60125rem] flex items-center'>
+                  <CircularProgressbar
+                    value={38}
+                    text={`${38}%`}
+                    styles={buildStyles({
+                      pathColor: '#F93535',
+                      textColor: '#212633',
+                      trailColor: '#F3F6FF',
+                    })}
+                  />
+                </div>
+
+                <span className='text-[#F93535] text-[3.5625rem] align-middle'>
+                  06
+                </span>
+
+                <div className='flex flex-col'>
+                  <div>Overdue work</div>
+                  <div>
+                    More than <span className='text-[#356CF9]'>32</span> jobs in
+                    progress
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='border-t border-[#E2E9FC] pt-6 text-[#434A5E]'>
-              0 jobs created with no time
+              <div className='flex items-center gap-x-2'>
+                <div className='w-[4.60125rem] h-[4.60125rem] flex items-center'>
+                  <CircularProgressbar
+                    value={62}
+                    text={`${62}%`}
+                    styles={buildStyles({
+                      pathColor: '#F9AB35',
+                      textColor: '#212633',
+                      trailColor: '#F3F6FF',
+                    })}
+                  />
+                </div>
+
+                <span className='text-[#F9AB35] text-[3.5625rem] align-middle'>
+                  19
+                </span>
+
+                <div className='flex flex-col'>
+                  <div>Work finished late</div>
+                  <div>
+                    More than <span className='text-[#356CF9]'>32</span> jobs in
+                    progress
+                  </div>
+                </div>
+              </div>
+              <div className='border-t border-[#E2E9FC] pt-6 text-[#434A5E]'>
+                0 jobs created with no time
+              </div>
             </div>
           </div>
         </div>
-        <div className='col-span-3 flex justify-between mt-[3.625rem] mb-[4.25rem]'>
+
+        <div className='flex flex-col md:flex-row justify-between mt-[3.625rem] mb-[4.25rem]'>
           <div className='flex items-center'>
             Local Government Area
             <div className='relative w-fit'>
@@ -220,41 +208,23 @@ function PresidentialMap() {
                 <option value='efe'>Efe</option>
                 <option value='ilejemeje'>Ilejemeje</option>
               </select>
-              <svg
-                className='absolute right-2 top-1/2 -translate-y-1/2'
-                width='17'
-                height='16'
-                viewBox='0 0 17 16'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
-                  d='M13.7154 5.64645C13.9106 5.84171 13.9106 6.15829 13.7154 6.35355L8.71537 11.3536C8.52011 11.5488 8.20353 11.5488 8.00826 11.3536L3.00826 6.35355C2.813 6.15829 2.813 5.84171 3.00826 5.64645C3.20353 5.45118 3.52011 5.45118 3.71537 5.64645L8.36182 10.2929L13.0083 5.64645C13.2035 5.45118 13.5201 5.45118 13.7154 5.64645Z'
-                  fill='#356CF9'
-                  stroke='#356CF9'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                />
-              </svg>
             </div>
           </div>
 
-          <div className='flex items-center gap-x-4'>
-            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633]'>
+          <div className='mt-4 md:mt-0 md:flex'>
+            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633] mt-2'>
               <div className='bg-[#F93535] w-4 h-4 rounded-[0.25rem] mr-2'></div>
               Leading Party
             </div>
-            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633]'>
+            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633] mt-2 md:ml-2'>
               <div className='bg-[#356CF9] w-4 h-4 rounded-[0.25rem] mr-2'></div>
               Close Second
             </div>
-            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633]'>
+            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633] mt-2 md:ml-2'>
               <div className='bg-[#F9AB35] w-4 h-4 rounded-[0.25rem] mr-2'></div>
               Third Party
             </div>
-            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633]'>
+            <div className='bg-[#F3F6FF] flex items-center p-2 rounded-lg text-[#212633] mt-2 md:ml-2'>
               <div className='bg-[#34C759] w-4 h-4 rounded-[0.25rem] mr-2'></div>
               Others
             </div>
@@ -262,15 +232,22 @@ function PresidentialMap() {
         </div>
       </div>
 
-      <div className=' flex justify-center items-center h-[646px] bg-blue-200'>
-        INTERACTIVE MAP COMING SOON
+      <div className='relative flex justify-center items-center '>
+        <img
+          src={map1}
+          alt='Map'
+          className='opacity-50 filter brightness-50 contrast-100'
+        />
+        <div className='absolute top-0 left-0 flex justify-center items-center'>
+          <h3 className='text-2xl text-black font-bold'>Coming soon...</h3>
+        </div>
       </div>
 
-      <div className='container grid grid-cols-4 gap-[3.635rem] py-[7.4375rem]'>
+      <div className='px-8 md:px-16 flex flex-col md:flex-row flex-wrap justify-between py-[7.4375rem]'>
         {parties.map((party, index) => (
           <div
             key={index}
-            className='bg-[rgba(23,72,201,0.4)] px-[1.375rem] pt-[0.375rem] pb-4 rounded-[0.8125rem]'
+            className='bg-[rgba(23,72,201,0.4)] md:w-1/5 md:mx-1 md:my-10 px-[1.375rem] pt-[0.375rem] mt-2 md:mt-0 pb-4 rounded-[0.8125rem]'
           >
             <div className='flex items-center bg-[#F3F6FF] py-1 px-2 w-fit rounded-lg text-[#212633] font-normal mb-2'>
               <div
@@ -301,13 +278,20 @@ function PresidentialMap() {
         ))}
       </div>
 
-      <div className=' flex justify-center items-center h-[646px] bg-blue-200'>
-        INTERACTIVE MAP COMING SOON
+      <div className='relative flex justify-center items-center'>
+        <img
+          src={map2}
+          alt='Interactive map'
+          className='opacity-50 filter brightness-50 contrast-100'
+        />
+        <div className='absolute top-0 left-0 flex justify-center items-center'>
+          <h3 className='text-black text-2xl font-bold'>Coming soon...</h3>
+        </div>
       </div>
 
       <div className='bg-[#EAF2FF]'>
-        <div className='container py-[4.8125rem]'>
-          <p className='font-normal text-2xl'>
+        <div className='px-8 md:px-16 py-[4.8125rem]'>
+          <p className='font-normal text-lg md:text-xl'>
             The Independent National Electoral Commission, INEC, has announced
             the result of the National Assembly election in Kwara North
             Senatorial District election. According to the result released by
@@ -325,16 +309,16 @@ function PresidentialMap() {
             Center, Ilorin.
           </p>
 
-          <div className='flex justify-center gap-x-16 mt-10'>
+          <div className='flex justify-center md:gap-x-16 mt-10'>
             <div className='flex'>
-              <div className='rounded-full bg-[#094094] w-12 h-12 mr-4'></div>
+              <div className='rounded-full bg-[#094094] w-10 h-5 md:w-6 md:h-6 mr-4'></div>
               <div className='flex flex-col'>
                 <span className='text-black font-bold'>2 Seats</span>
                 <span>Action Progressive Congress (APC)</span>
               </div>
             </div>
             <div className='flex'>
-              <div className='rounded-full bg-[#FF0606] w-12 h-12 mr-4'></div>
+              <div className='rounded-full bg-[#FF0606] w-10 h-5 md:w-6 md:h-6 mr-4'></div>
               <div className='flex flex-col'>
                 <span className='text-black font-bold'>1 Seat</span>
                 <span>Labour Party (LP)</span>
@@ -344,13 +328,13 @@ function PresidentialMap() {
         </div>
       </div>
 
-      <div className='flex flex-col gap-y-20 my-[7.5rem]'>
+      <div className='px-8 md:px-16 flex flex-col gap-y-20 mt-10 mb-20 md:my-[7.5rem]'>
         {results.map((result, index) => (
           <div
             key={index}
-            className='result-card bg-no-repeat bg-cover bg-center h-[24.875rem] mx-auto w-[97%] rounded-[1.625rem] text-white flex justify-end items-end'
+            className='result-card bg-no-repeat bg-cover bg-center h-40 md:h-[24.875rem] mt-[-40px] mx-auto w-[97%] rounded-[1.625rem] text-white flex justify-end items-end'
           >
-            <div className='mr-10 mb-8 font-medium text-[3.5625rem]'>
+            <div className='mr-10 mb-8 font-medium text-2xl'>
               {result.type} Result
             </div>
           </div>

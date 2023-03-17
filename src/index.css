@@ -2,42 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 @font-face {
-	font-family: Thiccboi;
-	src: url(./assets/regular.ttf);
+  font-family: Thiccboi;
+  src: url(./assets/regular.ttf);
 }
 body {
-	font-family: Thiccboi, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #edf2ff;
+  font-family: Thiccboi, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #edf2ff;
 }
 .customscroll::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 .customscroll::-webkit-scrollbar-track {
-	background: white;
+  background: white;
 }
 .customscroll::-webkit-scrollbar-thumb {
-	background: #888;
-	border-radius: 4px;
+  background: #888;
+  border-radius: 4px;
 }
 .customscroll::-webkit-scrollbar-thumb:hover {
-	background: #555;
-}
-
-.container {
-	@apply max-w-[90rem] mx-auto px-7 lg:px-[5.375rem];
+  background: #555;
 }
 
 .result-card {
-	background-image: url('/public/result-card-bg.png');
+  background-image: url('/public/result-card-bg.png');
 }
 
 /* .ward_title span {
