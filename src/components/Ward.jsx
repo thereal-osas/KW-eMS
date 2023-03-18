@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Data from "../Data/Kwara";
+import HOA from "../Data/HOA";
 
-function Ward({ name }) {
-	const Ward = Data.filter((a) => a.Ward === name);
+function Ward({ name, type }) {
+	const [Ward, setWard] = useState([]);
+	const Me = () => {
+		let unit;
+		if (type === "HOA") {
+			unit = HOA.filter((a) => a.Ward === name);
+		} else {
+			unit = Data.filter((a) => a.Ward === name);
+		}
+		setWard(unit);
+	};
+	useEffect(() => {
+		Me();
+	}, []);
+	// console.log(Ward);
+	// const Ward = Data.filter((a) => a.Ward === name);
 	return (
 		<section className="overflow-x-scroll mb-10 relative  whitespace-nowrap  customscroll ">
 			<div className="font-extrabold text-2xl sticky top-0 left-0 right-0 text-center pb-6">
@@ -18,6 +33,7 @@ function Ward({ name }) {
 				<div className="text-center min-w-[50px] ">LP</div>
 				<div className="text-center min-w-[50px] ">NNPP</div>
 				<div className="text-center min-w-[50px] ">PDP</div>
+				<div className="text-center min-w-[50px] ">SDP</div>
 
 				<div className="text-center min-w-[100px] ">Total Votes</div>
 				<div className=" min-w-[100px] ">Accredited Voters</div>
@@ -25,7 +41,7 @@ function Ward({ name }) {
 				<div className="text-center min-w-[100px]  "></div>
 			</div>
 			<div className="flex flex-col gap-3  mb-5 ">
-				{Ward.map((a, b) => (
+				{Ward?.map((a, b) => (
 					<div
 						key={b}
 						className="ward_title text-sm    flex justify-between gap-10   pb-2">
@@ -36,14 +52,23 @@ function Ward({ name }) {
 							</div>
 						</div>
 
-						<div className="text-center min-w-[50px]">{a.APC}</div>
+						<div className="text-center min-w-[50px]">{a.APC ? a.APC : 0}</div>
+						{a.Lp ? (
+							<div className="text-center min-w-[50px]">{a.Lp ? a.Lp : 0}</div>
+						) : (
+							<div className="text-center min-w-[50px]">{a.LP ? a.LP : 0}</div>
+						)}
 
-						<div className="text-center min-w-[50px]">{a.LP}</div>
-						<div className="text-center min-w-[50px]">{a.NNPP}</div>
-						<div className="text-center min-w-[50px]">{a.PDP}</div>
+						<div className="text-center min-w-[50px]">{a.NNPP ? a.APC : 0}</div>
+						<div className="text-center min-w-[50px]">{a.PDP ? a.PDP : 0}</div>
+						<div className="text-center min-w-[50px]">{a.SDP ? a.SDP : 0}</div>
 
 						<div className="text-center min-w-[100px]">
-							{a.LP + a.NNPP + a.PDP + a.APC}
+							{(a.LP ? a.LP : 0) +
+								(a.NNPP ? a.APC : 0) +
+								(a.PDP ? a.PDP : 0) +
+								(a.APC ? a.APC : 0) +
+								(a.SDP ? a.SDP : 0)}
 						</div>
 						<div className="text-center min-w-[100px] ">
 							{a.Accredited_Voters}
