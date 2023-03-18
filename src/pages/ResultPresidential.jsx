@@ -20,7 +20,7 @@ function ResultPresidential() {
 	return (
 		<section>
 			<div className="text-xl xs:text-2xl font-semibold text-center p-6">
-				<p>Kwara State Results</p>
+				<p>Kwara State Presidential Results</p>
 			</div>
 			<div className=" container flex md:flex-row flex-col items-center gap-6 justify-around mx-auto px-6">
 				<div className="flex xs:flex-row flex-col gap-3 items-center">
