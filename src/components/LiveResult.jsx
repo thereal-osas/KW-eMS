@@ -25,7 +25,7 @@ function LiveResult() {
             />
           </div>
           <div className='text-center mt-10'>
-            <Link to='/results'>
+            <Link to='/presidentialresults'>
               <button className='px-4 py-2 bg-[#336DFF] text-sm text-white font-semibold rounded-lg hover:bg-[#adc5ff] hover:text-[#000] transition ease-in duration-150'>
                 Track Results
               </button>
