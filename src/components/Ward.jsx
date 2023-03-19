@@ -16,8 +16,7 @@ function Ward({ name, type }) {
 	useEffect(() => {
 		Me();
 	}, []);
-	// console.log(Ward);
-	// const Ward = Data.filter((a) => a.Ward === name);
+
 	return (
 		<section className="overflow-x-scroll mb-10 relative  whitespace-nowrap  customscroll ">
 			<div className="font-extrabold text-2xl sticky top-0 left-0 right-0 text-center pb-6">

@@ -47,7 +47,7 @@ function AssemblyResultComponent({ data }) {
 	const Sdp = SDP_TEST.reduce((acc, cur) => acc + cur);
 	const Accre = ACCREDITED.reduce((acc, cur) => acc + cur);
 	const Regis = REGISTERED.reduce((acc, cur) => acc + cur);
-	console.log(Lp);
+	console.log(isNaN(Lp));
 
 	const Total = Apc + Pdp + Lp + Nnpp + Sdp;
 
@@ -114,7 +114,7 @@ function AssemblyResultComponent({ data }) {
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
 				<span className="w-[15%]">LP</span>
 				<div className="w-3/5 flex items-center justify-end gap-3">
-					{Lp === 0 ? (
+					{Lp === 0 || isNaN(Lp) ? (
 						<span className="flex">
 							0<span>%</span>
 						</span>
@@ -127,10 +127,10 @@ function AssemblyResultComponent({ data }) {
 					<div className="w-24  rounded-full h-2 bg-gray-600">
 						<div
 							className="bg-red-600 h-2 rounded-full"
-							style={{ width: Lp ? LPwidth : 0 }}></div>
+							style={{ width: Lp === 0 || isNaN(Lp) ? 0 : LPwidth }}></div>
 					</div>
 				</div>
-				<span className="w-1/5 text-end">{Lp}</span>
+				<span className="w-1/5 text-end">{Lp === 0 || isNaN(Lp) ? 0 : Lp}</span>
 			</div>
 			<div className="flex justify-between p-4 border-b-[0.1px] border-gray-300">
 				<span className="w-[15%]">NNPP</span>

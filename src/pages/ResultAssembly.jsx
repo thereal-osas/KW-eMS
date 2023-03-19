@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AssemblyResultComponent from "../components/AssemblyResultComponent";
-import ResultComponent from "../components/ResultComponent";
 import LGA from "../Data/LGA";
 function ResultAssembly() {
 	const [current, setcurrent] = useState([...LGA]);
@@ -20,7 +19,7 @@ function ResultAssembly() {
 	return (
 		<section>
 			<div className="text-xl xs:text-2xl font-semibold text-center p-6">
-				<p>Kwara State Presidential Results</p>
+				<p>Kwara State House of Assembly Results</p>
 			</div>
 			<div className=" container flex md:flex-row flex-col items-center gap-6 justify-around mx-auto px-6">
 				<div className="flex xs:flex-row flex-col gap-3 items-center">
