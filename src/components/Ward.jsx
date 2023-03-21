@@ -13,9 +13,13 @@ function Ward({ name, type }) {
 		}
 		setWard(unit);
 	};
-	useEffect(() => {
-		Me();
-	}, []);
+	useEffect(
+		() => {
+			Me();
+		},
+		// eslint-disable-next-line
+		[]
+	);
 
 	return (
 		<section className="overflow-x-scroll mb-10 relative  whitespace-nowrap  customscroll ">

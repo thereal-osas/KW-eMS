@@ -95,6 +95,7 @@ function App() {
 						path="/results/kwara/roa/:lga"
 						element={<AssemblyResultDetails />}
 					/>
+
 					{/* <Route
 						path="/news"
 						element={<News />}
