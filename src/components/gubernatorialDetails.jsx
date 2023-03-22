@@ -4,7 +4,6 @@ import Data from "../Data/Gubernatorial";
 function GubernatorialDetails() {
 	const { name } = useParams();
 	const item = Data.find((a) => a.party === name);
-	console.log(item);
 	return (
 		<div className="px-6">
 			<section className="max-w-3xl  p-8 gap-8 mt-8 mx-auto shadow-md shadow-gray-600   flex flex-col md:flex-row">

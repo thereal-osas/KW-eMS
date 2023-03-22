@@ -158,11 +158,6 @@ function ResultGovernors() {
 						</div>
 						<span className="w-1/5 text-end">{a.SDP ? a.SDP : 0}</span>
 					</div>
-					{/* // <button className="flex w-full  gap-3 items-center justify-center text-sm font-medium text-blue-500 p-5 border-b-[0.1px] border-gray-300">
-			// 	<span>Scroll down for more</span>
-			// 	<FiArrowDown size={25} />
-			// </button> */}
-					{/* Scroll */}
 				</section>
 			))}
 		</div>

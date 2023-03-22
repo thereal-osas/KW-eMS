@@ -14,7 +14,6 @@ function ResultAssembly() {
 	};
 	const handleYearChange = (e) => {
 		setyear(e.target.value);
-		console.log(year);
 	};
 	return (
 		<section>

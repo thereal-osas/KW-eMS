@@ -47,7 +47,6 @@ function AssemblyResultComponent({ data }) {
 	const Sdp = SDP_TEST.reduce((acc, cur) => acc + cur);
 	const Accre = ACCREDITED.reduce((acc, cur) => acc + cur);
 	const Regis = REGISTERED.reduce((acc, cur) => acc + cur);
-	console.log(isNaN(Lp));
 
 	const Total = Apc + Pdp + Lp + Nnpp + Sdp;
 

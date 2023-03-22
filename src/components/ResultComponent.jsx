@@ -30,7 +30,6 @@ function ResultComponent({ data }) {
 	const Regis = REGISTERED.reduce((acc, cur) => acc + cur);
 
 	const Total = Apc + Pdp + Lp + Nnpp;
-	console.log(Total);
 
 	const APCwidth = (Apc / Total) * 100;
 	const PDPwidth = (Pdp / Total) * 100;

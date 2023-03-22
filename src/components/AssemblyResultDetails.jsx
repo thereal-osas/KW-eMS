@@ -13,10 +13,8 @@ function AssemblyResultDetails() {
 		// }
 		return [...new Set(unique)];
 	};
-	const TESTS = getUniqueValues(Data, "LGA");
-	console.log(TESTS);
+	// const TESTS = getUniqueValues(Data, "LGA");
 	const Wards = getUniqueValues(Info, "Ward");
-	console.log(Wards);
 
 	return (
 		<div className="flex flex-col ">
